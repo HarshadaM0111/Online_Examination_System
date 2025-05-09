@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<hibernate-configuration>
+	<session-factory>
+		<!-- Database Connection Settings -->
+		<property name="hibernate.connection.driver_class">com.mysql.cj.jdbc.Driver</property>
+		<property name="hibernate.connection.url">jdbc:mysql://localhost:3306/online_examination_system</property>
+		<property name="hibernate.connection.username">root</property>
+		<property name="hibernate.connection.password">security</property>
+		<!-- Hibernate Properties -->
+		<property name="hibernate.dialect">org.hibernate.dialect.MySQL8Dialect</property>
+		<property name="hibernate.show_sql">false</property>
+		<property name="hibernate.format_sql">true</property>
+		<property name="hibernate.hbm2ddl.auto">update</property>
+		<property name="hibernate.current_session_context_class">thread</property>
+		
+		<!-- Entity Class Mappings -->
+		<mapping class="com.exam.entities.Admin" />
+		<mapping class="com.exam.entities.Student" />
+		<mapping class="com.exam.entities.Instructor" />
+		<mapping class="com.exam.entities.Department" />
+		<mapping class="com.exam.entities.Course" />
+		<mapping class="com.exam.entities.Topic" />
+		<mapping class="com.exam.entities.Exam" />
+		<mapping class="com.exam.entities.Question" />
+		<mapping class="com.exam.entities.User"/>
+		<mapping class="com.exam.entities.Result"/>
+	    <mapping class="com.exam.entities.Option"/> 
+        <mapping class="com.exam.entities.StudentAnswer"/>
+        <mapping class="com.exam.entities.CorrectAnswer"/>
+		
+	</session-factory>
+</hibernate-configuration>
